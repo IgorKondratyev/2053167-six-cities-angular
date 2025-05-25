@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
+import { MainComponent } from './main/main.component';
+import {offers} from '../../mocks/offers';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [CommonModule, MainComponent],
+  template: `<app-main [offers]="offers" />`,
 })
 export class AppComponent {
-  title = 'angular-template-project';
+  offers = offers;
 }
