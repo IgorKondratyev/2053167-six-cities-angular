@@ -1,3 +1,17 @@
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+  constructor(private router: Router) {}
+
+  logout(): void {
+   
+    localStorage.removeItem('authToken');
+
+ // src/app/components/main/main.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -28,5 +42,8 @@ export class MainComponent {
 
   goToFavorites(): void {
     this.router.navigate(['/favorites']);
+  }
+}
+    this.router.navigate(['/login']);
   }
 }
