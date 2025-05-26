@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Offer } from '../../../types/offer';
 import { CurrentOffersBlockComponent } from '../current-offers-block/current-offers-block.component';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-main',
